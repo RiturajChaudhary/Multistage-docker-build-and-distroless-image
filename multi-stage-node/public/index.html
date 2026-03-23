@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Node App</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    h1 { color: #4CAF50; }
+    button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+    p { font-size: 18px; color: #333; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Node.js Web App!  at 3000 🚀</h1>
+  <p id="greeting">Click the button to see a message!</p>
+  <button onclick="showMessage()">Click Me!</button>
+
+  <script>
+    const messages = [
+      "Hello, Browser! 🌟",
+      "Node.js + Docker = Awesome! 🚀",
+      "You made it! 🎉",
+      "Keep learning and coding! 💻"
+    ];
+
+    function showMessage() {
+      const randomIndex = Math.floor(Math.random() * messages.length);
+      document.getElementById("greeting").innerText = messages[randomIndex];
+    }
+  </script>
+</body>
+</html>
